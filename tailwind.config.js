@@ -14,6 +14,12 @@ export default {
         bgColor: "#fdfff4",
         btnBorderColor: "#bababa",
       },
+      gradientColorStops: {
+        "btn-hover-bg": {
+          start: "#b66ae2",
+          end: "#ffa44c",
+        },
+      },
     },
   },
   plugins: [],
