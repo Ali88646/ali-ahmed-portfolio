@@ -3,11 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sequel: ["sequel", "sans"],
-      },
       colors: {
         primaryColor: "#ffa44c",
+        primaryColorLow: "#FFA44C",
         secondaryColor: "#b66ae2",
         headingsColor: "#0b0b0e",
         textColor: "#838383",
@@ -19,6 +17,9 @@ export default {
           start: "#b66ae2",
           end: "#ffa44c",
         },
+      },
+      fontFamily: {
+        custom: ["sequel", "sans"],
       },
     },
   },

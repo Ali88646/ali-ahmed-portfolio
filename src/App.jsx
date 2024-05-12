@@ -4,9 +4,9 @@ import Navbar from "./navBar/Navbar";
 
 function App() {
   return (
-    <main className="w-full bg-bgColor">
+    <main className="w-full bg-bgColor ">
       <Navbar />
-      <div className="wrapper sm:w-[85%] w-[90%] mx-auto  h-[50vh]">
+      <div className="wrapper mx-auto  w-[90%] sm:w-[80%]">
         <HeroSection />
         <About />
       </div>

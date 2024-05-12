@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "sequel";
-  src: local("./fonts/SequelSansVFBody.woff") format(woff);
-}
-
 body {
-  font-family: sequel, sans-serif;
+  overflow-x: hidden;
 }
