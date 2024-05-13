@@ -62,7 +62,7 @@ const Navbar = () => {
                 onClick={handleIsOpen}
               >
                 <a href="#" className="text-5xl font-semibold">
-                  {item}
+                  {item.title}
                 </a>
               </li>
             ))}

@@ -67,8 +67,14 @@ function HeroSection() {
                   key={i}
                   className="group relative overflow-hidden font-bold text-gray-500  duration-300 hover:text-primaryColor "
                 >
-                  <a href="#" className="text-sm ">
-                    {item}
+                  <a
+                    href="#"
+                    className="relative text-2xl duration-100 hover:text-primaryColor"
+                  >
+                    {<item.icon />}
+                    {/* <p className="  rounded-full bg-primaryColor px-4 py-1 text-sm ">
+                      {item.title}
+                    </p> */}
                   </a>
                   {/* <div className="absolute bottom-0 left-[-100%] h-[1px] w-full bg-headingsColor duration-300 group-hover:left-0"></div> */}
                 </li>

@@ -9,19 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 function About() {
   useGSAP(() => {
     gsap.from(".about-section", {
-      y: 250,
+      y: 150,
+      // height: 3,
       duration: 1,
+      opacity: 0,
+      ease: "power3.out",
       scrollTrigger: {
         trigger: ".about-section",
         scroller: "body",
-        scrub: 3,
-        start: 200,
+        start: 100,
         markers: true,
+        scrub: 1,
       },
     });
   }, []);
   return (
-    <div className="about-section flex h-screen w-full flex-col gap-7   rounded-3xl  sm:flex-row sm:items-center sm:justify-center">
+    <div className="about-section flex h-screen w-full flex-col gap-7 overflow-hidden  rounded-3xl sm:flex-row sm:items-center sm:justify-center">
       <div className="flex w-full items-center justify-center sm:w-1/2 ">
         <img
           src="src\assets\images\about-image.png"

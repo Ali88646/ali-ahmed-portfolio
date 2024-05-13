@@ -1,5 +1,6 @@
 import About from "./about/About";
 import HeroSection from "./heroSection/HeroSection";
+import MyWorks from "./myWorks/MyWorks";
 import Navbar from "./navBar/Navbar";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <div className="wrapper mx-auto  w-[90%] sm:w-[80%]">
         <HeroSection />
         <About />
+        <MyWorks />
       </div>
     </main>
   );

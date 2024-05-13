@@ -21,6 +21,9 @@ export default {
       fontFamily: {
         custom: ["sequel", "sans"],
       },
+      boxShadow: {
+        boxShadow: "0px 0px 15px 2px #ccc",
+      },
     },
   },
   plugins: [],
