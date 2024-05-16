@@ -15,7 +15,7 @@ function HeroSection() {
     gsap.from(".name-section", {});
   }, []);
   return (
-    <div className=" flex w-full  items-center  pt-0  sm:h-[80vh] sm:justify-between sm:pt-10 ">
+    <div className=" flex w-full  items-center  pt-0  sm:h-[65vh] sm:justify-between sm:pt-10 ">
       {/* left */}
       <div className="name-section mb-10 flex w-full flex-col gap-1 sm:mb-auto sm:w-2/3  sm:px-20">
         <div className="social-icons flex w-full items-center justify-start gap-3 text-xl text-textColor ">
@@ -33,8 +33,8 @@ function HeroSection() {
           </div>
         </div>
         <div className="name relative mt-2 w-full ">
-          <h1 className="text-[14vw] font-semibold sm:text-8xl">Hey there,</h1>
-          <h1 className="hero-name  text-[14vw] font-semibold sm:text-8xl">
+          <h1 className="text-[12vw] font-semibold sm:text-8xl">Hey there,</h1>
+          <h1 className="hero-name  text-[12vw] font-semibold sm:text-8xl">
             it's Ali Ahmed
           </h1>
 
@@ -65,18 +65,17 @@ function HeroSection() {
               <>
                 <li
                   key={i}
-                  className="group relative overflow-hidden font-bold text-gray-500  duration-300 hover:text-primaryColor "
+                  className="group relative  font-bold text-gray-500 duration-300 hover:text-primaryColor"
                 >
                   <a
                     href="#"
-                    className="relative text-2xl duration-100 hover:text-primaryColor"
+                    className="relative text-2xl duration-100  hover:text-4xl hover:text-primaryColor"
                   >
                     {<item.icon />}
-                    {/* <p className="  rounded-full bg-primaryColor px-4 py-1 text-sm ">
-                      {item.title}
-                    </p> */}
                   </a>
-                  {/* <div className="absolute bottom-0 left-[-100%] h-[1px] w-full bg-headingsColor duration-300 group-hover:left-0"></div> */}
+                  <p className="group-hover:opacity-1 absolute -left-24 top-1  rounded-full bg-primaryColor px-4 text-[14px]  font-light text-bgColor opacity-0">
+                    {item.title}
+                  </p>
                 </li>
                 {i < navBarData.length - 1 && (
                   <div className="h-8 w-[2px] bg-gray-300"></div>

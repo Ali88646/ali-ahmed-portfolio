@@ -4,30 +4,45 @@ import Button from "../button/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Lenis from "lenis";
 gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update();
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 function About() {
   useGSAP(() => {
     gsap.from(".about-section", {
-      y: 150,
-      // height: 3,
-      duration: 1,
-      opacity: 0,
+      y: 250,
+      x: -250,
+
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".about-section",
         scroller: "body",
-        start: 100,
-        markers: true,
-        scrub: 1,
+        start: "top 85%",
+        end: "70% 85%",
+        // markers: true,
+        scrub: 2,
+        duration: 1,
       },
     });
   }, []);
   return (
-    <div className="about-section flex h-screen w-full flex-col gap-7 overflow-hidden  rounded-3xl sm:flex-row sm:items-center sm:justify-center">
+    <div className="about-section  flex  w-full flex-col gap-7 overflow-hidden  rounded-3xl  sm:flex-row sm:items-center sm:justify-center">
       <div className="flex w-full items-center justify-center sm:w-1/2 ">
         <img
-          src="src\assets\images\about-image.png"
+          src="src\assets\images\Creative-thinking-amico.png"
           alt="about-img"
           className="w-3/4"
         />
