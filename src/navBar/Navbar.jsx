@@ -5,6 +5,7 @@ import { MdMenu } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
+import Logo from "../logo/Logo";
 
 // component start ==>
 const Navbar = () => {
@@ -25,14 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className=" flex h-[6.5rem] w-full items-center justify-between  px-[5%] py-[2%]">
-      <div className="logo-name flex h-full w-1/3 items-center gap-2 sm:w-[20%] ">
-        <img
-          src="src\assets\images\ali-logo.png"
-          alt="ali-logo"
-          className="w-full sm:w-3/5"
-        />
-      </div>
-
+      <Logo width={"w-1/3"} />
       <div className="btn hidden h-full w-[20%] sm:block">
         <Button text={`Let's Talk`} icon={<FiArrowRight />} layer={true} />
       </div>

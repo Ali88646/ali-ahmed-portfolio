@@ -39,7 +39,7 @@ function About() {
     });
   }, []);
   return (
-    <div className="about-section  flex  w-full flex-col gap-7 overflow-hidden  rounded-3xl  sm:flex-row sm:items-center sm:justify-center">
+    <div className="about-section  sm:mt-10  flex w-full flex-col gap-7  overflow-hidden  rounded-3xl sm:flex-row sm:items-center sm:justify-center">
       <div className="flex w-full items-center justify-center sm:w-1/2 ">
         <img
           src="src\assets\images\Creative-thinking-amico.png"

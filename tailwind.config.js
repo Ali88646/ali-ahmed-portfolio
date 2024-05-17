@@ -9,7 +9,7 @@ export default {
         secondaryColor: "#b66ae2",
         headingsColor: "#0b0b0e",
         textColor: "#838383",
-        bgColor: "#fdfff4",
+        bgColor: "#FEFEFE",
         btnBorderColor: "#bababa",
       },
       gradientColorStops: {

@@ -1,4 +1,6 @@
 import About from "./about/About";
+import ConnectWithMe from "./connectWithMe/ConnectWithMe";
+import Footer from "./footer/Footer";
 import HeroSection from "./heroSection/HeroSection";
 import MyWorks from "./myWorks/MyWorks";
 import Navbar from "./navBar/Navbar";
@@ -15,7 +17,9 @@ function App() {
       <Skills />
       <div className="wrapper mx-auto  w-[90%] sm:w-[80%]">
         <MyWorks />
+        <ConnectWithMe />
       </div>
+      <Footer />
     </main>
   );
 }
