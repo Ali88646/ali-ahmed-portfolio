@@ -25,7 +25,6 @@ function About() {
     gsap.from(".about-section", {
       y: 250,
       x: -250,
-
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".about-section",
@@ -39,7 +38,7 @@ function About() {
     });
   }, []);
   return (
-    <div className="about-section  sm:mt-10  flex w-full flex-col gap-7  overflow-hidden  rounded-3xl sm:flex-row sm:items-center sm:justify-center">
+    <div className="about-section  flex  w-full flex-col gap-7 overflow-hidden  rounded-3xl  sm:mt-10 sm:flex-row sm:items-center sm:justify-center">
       <div className="flex w-full items-center justify-center sm:w-1/2 ">
         <img
           src="src\assets\images\Creative-thinking-amico.png"

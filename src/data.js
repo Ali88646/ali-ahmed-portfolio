@@ -5,37 +5,11 @@ import { GrTechnology } from "react-icons/gr";
 import { RiContactsFill } from "react-icons/ri";
 
 export const navBarData = [
-  { title: "Home", icon: AiFillHome  },
-  { title: "About", icon: FaExclamationCircle  },
-  { title: "Works", icon: MdOutlineWork  },
-  { title: "Services", icon: GrTechnology  },
-  { title: "Contact", icon: RiContactsFill  },
-];
-
-export const myWorksData = [
-  {
-    id: 646,
-    title: "Energy Saver - Website Design",
-    type: "Web Design",
-    image: "url",
-    btn: "Component",
-  },
-
-  {
-    id: 647,
-    title: "Creative Agency Design",
-    type: "Landing Page Design",
-    image: "url",
-    btn: "Component",
-  },
-
-  {
-    id: 648,
-    title: "Financial Application Design",
-    type: "Mobile App Design",
-    image: "url",
-    btn: "Component",
-  },
+  { title: "Home", icon: AiFillHome },
+  { title: "About", icon: FaExclamationCircle },
+  { title: "Works", icon: MdOutlineWork },
+  { title: "Services", icon: GrTechnology },
+  { title: "Contact", icon: RiContactsFill },
 ];
 
 export const myOfferings = [

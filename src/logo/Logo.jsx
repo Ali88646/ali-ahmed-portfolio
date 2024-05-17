@@ -1,8 +1,6 @@
 function Logo({ width }) {
   return (
-    <div
-      className={`logo-name flex h-full ${width} items-center gap-2 sm:w-[20%]  `}
-    >
+    <div className={`logo-name flex ${width} h-full w-1/3 items-center gap-2`}>
       <img
         src="src\assets\images\ali-logo.png"
         alt="ali-logo"

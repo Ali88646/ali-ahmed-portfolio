@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import About from "./about/About";
 import ConnectWithMe from "./connectWithMe/ConnectWithMe";
 import Footer from "./footer/Footer";
@@ -19,7 +20,7 @@ function App() {
         <MyWorks />
         <ConnectWithMe />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

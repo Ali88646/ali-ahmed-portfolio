@@ -2,40 +2,59 @@ import { myWorks } from "../data";
 import { FiArrowRight } from "react-icons/fi";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useEffect, useState } from "react";
 // import { ScrollTrigger } from "gsap/all";
 
 function MyWorks() {
+  const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    const counterTimer = setInterval(() => {
+      setCounter((counter) => (counter < 1 ? counter + 1 : 0));
+    }, 3000);
+    return () => clearInterval(counterTimer);
+  }, []);
+
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".card-div",
-        start: "top 70%",
-        end: "bottom 70%",
-        duration: 0.5,
-        // markers: true,
-        scrub: true,
-      },
-    });
-    tl.from(".card-div", {
-      y: 100,
-      // opacity: 0,
-      stagger: 0.1,
+    const elements = gsap.utils.toArray(".card-div");
+    elements.forEach((elem) => {
+      gsap.from(elem, {
+        y: 100,
+        opacity: 0,
+        scale: 0.75,
+        duration: 0.75,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "bottom 90%",
+          scrub: 1,
+        },
+      });
     });
   }, []);
+
+  // useGSAP(() => {
+  //   const workImages = gsap.utils.toArray(".work-img");
+  //   workImages.forEach((elem) => {
+  //     gsap.from(elem, {
+  //       opacity: 0,
+  //       duration: 0.45,
+  //     });
+  //   });
+  // }, [counter]);
 
   return (
     <div className="mt-13 flex w-full flex-wrap justify-center gap-5">
       {myWorks.map((work, i) => {
         return (
           <div
-            key={i}
+            key={i + 1}
             className={`card-div ${(i + 1) % 3 !== 0 ? "w-full sm:w-[40%]" : "h-[30rem] w-full sm:w-[82%]"} group  flex  cursor-pointer flex-col gap-1 rounded-md sm:mb-3 `}
           >
-            <div className="img-div  w-full gap-6 overflow-hidden rounded-2xl bg-red-400   shadow-boxShadow ">
+            <div className="img-div  w-full gap-6 overflow-hidden rounded-2xl shadow-boxShadow">
               <img
-                src={work.img_url[0]}
+                src={i < 2 ? work.img_url[counter] : work.img_url[0]}
                 alt={work.title}
-                className="w-full scale-105 duration-200 hover:scale-110"
+                className={`${i < 2 && "work-img"} w-full scale-105 duration-200 hover:scale-110`}
               />
             </div>
             <div className="flex w-full justify-between">
@@ -45,7 +64,7 @@ function MyWorks() {
               </div>
               <div className="flex w-[30%] items-center justify-end ">
                 <button
-                  className={`group-card-btn flex h-[8vw] hover:border-primaryColor hover:bg-primaryColor sm:h-[3vw]  ${(i + 1) % 3 !== 0 ? "w-[15%] sm:w-[50%]" : "w-[15%] sm:w-[50%]"}  items-center justify-center rounded-full border-2 border-textColor p-2 text-2xl text-textColor duration-200`}
+                  className={`group-card-btn flex h-[8vw] hover:border-primaryColor hover:bg-primaryColor sm:h-[3vw]  ${(i + 1) % 3 !== 0 ? "w-1/2 sm:w-[50%]" : "w-1/2 sm:w-[25%]"}  items-center justify-center rounded-full border-2 border-textColor p-2 text-2xl text-textColor duration-200`}
                 >
                   <div className="card-btn w-full">
                     <FiArrowRight />

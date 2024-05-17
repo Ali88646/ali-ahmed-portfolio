@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className=" flex h-[6.5rem] w-full items-center justify-between  px-[5%] py-[2%]">
-      <Logo width={"w-1/3"} />
+      <Logo width={"sm:w-[20%]"} />
       <div className="btn hidden h-full w-[20%] sm:block">
         <Button text={`Let's Talk`} icon={<FiArrowRight />} layer={true} />
       </div>

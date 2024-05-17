@@ -12,12 +12,24 @@ import { navBarData } from "../data";
 
 function HeroSection() {
   useGSAP(() => {
-    gsap.from(".name-section", {});
+    gsap.from(".name-section", {
+      y: 150,
+      duration: 0.75,
+    });
+    const elements = gsap.utils.toArray(".hero-name");
+    elements.forEach((elem, i) => {
+      gsap.from(elem, {
+        y: 100,
+        opacity: 0,
+        duration: 0.7 * i + 0.45,
+        ease: "elastic.out(1,1)",
+      });
+    });
   }, []);
   return (
     <div className=" flex w-full  items-center  pt-0  sm:h-[65vh] sm:justify-between sm:pt-10 ">
       {/* left */}
-      <div className="name-section mb-10 flex w-full flex-col gap-1 sm:mb-auto sm:w-2/3  sm:px-20">
+      <div className="name-section mb-10 flex w-full flex-col justify-center gap-1 sm:h-screen   sm:w-2/3  sm:px-20">
         <div className="social-icons flex w-full items-center justify-start gap-3 text-xl text-textColor ">
           <div className="cursor-pointer duration-200 hover:text-headingsColor">
             <FaInstagram />
@@ -33,7 +45,9 @@ function HeroSection() {
           </div>
         </div>
         <div className="name relative mt-2 w-full ">
-          <h1 className="text-[12vw] font-semibold sm:text-8xl">Hey there,</h1>
+          <h1 className="hero-name text-[12vw] font-semibold sm:text-8xl">
+            Hey there,
+          </h1>
           <h1 className="hero-name  text-[12vw] font-semibold sm:text-8xl">
             it's Ali Ahmed
           </h1>
@@ -50,7 +64,7 @@ function HeroSection() {
         <div className="sm:sh-12 mt-[2rem] flex h-10 w-full gap-3 sm:h-12   sm:w-[55%]">
           <Button text={"Say Hello"} icon={<FiArrowRight />} layer={true} />
           <Button
-            text={"My Portfolio"}
+            text={"My Resume"}
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
             layer={false}
@@ -62,11 +76,8 @@ function HeroSection() {
         <ul className="nav-items hidden h-full w-[10%] flex-col  items-center  sm:flex">
           {navBarData.map((item, i) => {
             return (
-              <>
-                <li
-                  key={i}
-                  className="group relative  font-bold text-gray-500 duration-300 hover:text-primaryColor"
-                >
+              <div key={i} className="flex flex-col items-center ">
+                <li className="group relative  font-bold text-gray-500 duration-300 hover:text-primaryColor">
                   <a
                     href="#"
                     className="relative text-2xl duration-100  hover:text-4xl hover:text-primaryColor"
@@ -80,7 +91,7 @@ function HeroSection() {
                 {i < navBarData.length - 1 && (
                   <div className="h-8 w-[2px] bg-gray-300"></div>
                 )}
-              </>
+              </div>
             );
           })}
         </ul>

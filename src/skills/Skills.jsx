@@ -9,7 +9,7 @@ function Skills() {
     const animation = gsap.to(scrollingText, {
       xPercent: -218,
       repeat: -1,
-      duration: 20,
+      duration: 15,
       ease: "none",
     });
     return () => {
@@ -23,7 +23,7 @@ function Skills() {
     // });
   }, []);
   return (
-    <div className=" w-full overflow-x-hidden sm:text-[10vw] ">
+    <div className=" my-10 w-full overflow-x-hidden text-[15.5vw] sm:mt-0 sm:text-[10vw] ">
       <div ref={textAnimRef} className="skills-box flex w-full gap-3">
         <p className=" skills-text text-nowrap">
           HTML5 CSS3 Javascript React.js gSAP Tailwind
