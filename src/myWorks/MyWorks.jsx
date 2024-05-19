@@ -32,16 +32,6 @@ function MyWorks() {
     });
   }, []);
 
-  // useGSAP(() => {
-  //   const workImages = gsap.utils.toArray(".work-img");
-  //   workImages.forEach((elem) => {
-  //     gsap.from(elem, {
-  //       opacity: 0,
-  //       duration: 0.45,
-  //     });
-  //   });
-  // }, [counter]);
-
   return (
     <div className="mt-13 flex w-full flex-wrap justify-center gap-5">
       {myWorks.map((work, i) => {

@@ -30,8 +30,8 @@ export const myWorks = [
   {
     id: 650,
     img_url: [
-      "src/assets/images/myWorks/dashboard/dashboard.webp",
-      "src/assets/images/myWorks/dashboard/dashboard_2.webp",
+      "/images/myWorks/dashboard/dashboard.webp",
+      "/images/myWorks/dashboard/dashboard_2.webp",
     ],
     title: "Admin Dashboard",
     type: "Only styling admin dashboard",
@@ -39,15 +39,15 @@ export const myWorks = [
   {
     id: 651,
     img_url: [
-      "src/assets/images/myWorks/ochi/ochi.webp",
-      "src/assets/images/myWorks/ochi/ochi_2.webp",
+      "/images/myWorks/ochi/ochi.webp",
+      "/images/myWorks/ochi/ochi_2.webp",
     ],
     title: "Ochi",
     type: "Animation project",
   },
   {
     id: 651,
-    img_url: ["src/assets/images/myWorks/shoeStore/filtering.webp"],
+    img_url: ["/images/myWorks/shoeStore/filtering.webp"],
     title: "Shoe Store",
     type: "Advanced Filtering",
   },

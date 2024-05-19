@@ -41,7 +41,7 @@ function About() {
     <div className="about-section  flex  w-full flex-col gap-7 overflow-hidden  rounded-3xl  sm:mt-10 sm:flex-row sm:items-center sm:justify-center">
       <div className="flex w-full items-center justify-center sm:w-1/2 ">
         <img
-          src="src\assets\images\Creative-thinking-amico.png"
+          src="\images\Creative-thinking-amico.png"
           alt="about-img"
           className="w-3/4"
         />
@@ -58,12 +58,18 @@ function About() {
           As I was attatched with digital things, I found myself for this job
         </p>
         <div className="mt-5 flex h-10 w-full gap-3 px-3 sm:h-12   sm:w-3/4">
-          <Button text={"Lets Talk"} icon={<FiArrowRight />} layer={true} />
           <Button
-            text={"Our Services"}
+            text={"Lets Talk"}
+            icon={<FiArrowRight />}
+            layer={true}
+            url={"https://wa.me/923152260686"}
+          />
+          <Button
+            text={"My Services"}
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
             layer={false}
+            // url={""}
           />
         </div>
       </div>

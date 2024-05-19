@@ -11,18 +11,35 @@ import gsap from "gsap";
 import { navBarData } from "../data";
 
 function HeroSection() {
+  const designation = "Frontend Web Developer";
   useGSAP(() => {
     gsap.from(".name-section", {
       y: 150,
       duration: 0.75,
     });
+    gsap.from(".hr-line", {
+      width: 0,
+      duration: 2,
+      delay: 0.35,
+      ease: "elastic.out(0.5.1)",
+    });
     const elements = gsap.utils.toArray(".hero-name");
     elements.forEach((elem, i) => {
       gsap.from(elem, {
-        y: 100,
-        opacity: 0,
-        duration: 0.7 * i + 0.45,
+        y: 150,
+        scaleY: 0,
+        duration: 2.5,
+        delay: i * 0.45,
         ease: "elastic.out(1,1)",
+      });
+    });
+
+    const desigElem = gsap.utils.toArray(".desig-letter");
+    desigElem.forEach((letter, index) => {
+      gsap.from(letter, {
+        opacity: 0,
+        duration: 0.57,
+        delay: 0.09 * index,
       });
     });
   }, []);
@@ -44,16 +61,26 @@ function HeroSection() {
             <FaLinkedin />
           </div>
         </div>
-        <div className="name relative mt-2 w-full ">
-          <h1 className="hero-name text-[12vw] font-semibold sm:text-8xl">
-            Hey there,
-          </h1>
-          <h1 className="hero-name  text-[12vw] font-semibold sm:text-8xl">
-            it's Ali Ahmed
-          </h1>
+        <div className="name relative mt-2 w-full  ">
+          <div className="w-full overflow-hidden  sm:h-[7rem]">
+            <h1 className="hero-name text-[12vw] font-semibold sm:text-8xl">
+              Hey there,
+            </h1>
+          </div>
+          <div className="w-full overflow-hidden  sm:h-[7rem]">
+            <h1 className="hero-name  text-[12vw] font-semibold sm:text-8xl">
+              it's Ali Ahmed
+            </h1>
+          </div>
 
           <h2 className=" mb-2 text-2xl font-semibold text-textColor sm:mb-4 sm:text-4xl">
-            Frontend web developer
+            {designation.split("").map((letter, i) => {
+              return (
+                <span className="desig-letter" key={i}>
+                  {letter}
+                </span>
+              );
+            })}
           </h2>
           <div className="hr-line absolute bottom-0 left-0 h-[2px] w-3/4 bg-primaryColor  text-textColor sm:h-1 "></div>
         </div>
@@ -62,12 +89,19 @@ function HeroSection() {
           web developer
         </p>
         <div className="sm:sh-12 mt-[2rem] flex h-10 w-full gap-3 sm:h-12   sm:w-[55%]">
-          <Button text={"Say Hello"} icon={<FiArrowRight />} layer={true} />
+          <Button
+            text={"Say Hello"}
+            icon={<FiArrowRight />}
+            layer={true}
+            url={"https://www.linkedin.com/in/ali-ahmed-a86419131/"}
+          />
+
           <Button
             text={"My Resume"}
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
             layer={false}
+            url={"public/docs/my-cv.pdf"}
           />
         </div>
       </div>

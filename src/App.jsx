@@ -1,7 +1,6 @@
-import { useGSAP } from "@gsap/react";
 import About from "./about/About";
 import ConnectWithMe from "./connectWithMe/ConnectWithMe";
-import Footer from "./footer/Footer";
+// import Footer from "./footesr/Footer";
 import HeroSection from "./heroSection/HeroSection";
 import MyWorks from "./myWorks/MyWorks";
 import Navbar from "./navBar/Navbar";

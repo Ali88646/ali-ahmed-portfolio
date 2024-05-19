@@ -1,6 +1,7 @@
-function Button({ text, icon, bgColor, layer }) {
+function Button({ text, icon, bgColor, layer, url }) {
   return (
-    <button
+    <a
+      href={url}
       className={`group  relative flex items-center justify-between  overflow-hidden rounded-full border-[1px] px-3  sm:h-full sm:w-1/2 ${bgColor} ${
         layer
           ? "border-2 border-primaryColor duration-200 hover:border-bgColor"
@@ -22,7 +23,7 @@ function Button({ text, icon, bgColor, layer }) {
       {layer && (
         <div className="absolute left-[-100%] top-0 h-full  w-full rounded-full bg-primaryColor duration-200 ease-out group-hover:left-0 group-hover:z-10"></div>
       )}
-    </button>
+    </a>
   );
 }
 

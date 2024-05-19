@@ -15,12 +15,18 @@ function ConnectWithMe() {
             Work
           </h2>
         </div>
-        <div className="connect-me-btn mt-10 flex h-[3rem] w-4/6 gap-5">
-          <Button text={"Say Hello"} icon={<FiArrowRight />} layer={true} />
+        <div className="connect-me-btn mt-10 flex h-[3rem] w-full justify-center gap-5 sm:w-4/6">
+          <Button
+            text={"Say Hello"}
+            icon={<FiArrowRight />}
+            layer={true}
+            url={"https://www.linkedin.com/in/ali-ahmed-a86419131/"}
+          />
           <Button
             text={"My Resume"}
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
+            url={"public/docs/my-cv.pdf"}
           />
         </div>
       </div>

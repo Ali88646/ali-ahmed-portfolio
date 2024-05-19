@@ -28,7 +28,12 @@ const Navbar = () => {
     <nav className=" flex h-[6.5rem] w-full items-center justify-between  px-[5%] py-[2%]">
       <Logo width={"sm:w-[20%]"} />
       <div className="btn hidden h-full w-[20%] sm:block">
-        <Button text={`Let's Talk`} icon={<FiArrowRight />} layer={true} />
+        <Button
+          text={`Let's Talk`}
+          icon={<FiArrowRight />}
+          layer={true}
+          url={"https://wa.me/923152260686"}
+        />
       </div>
       <div
         className="menu-btn flex h-full w-[10%] cursor-pointer  items-center text-5xl hover:text-primaryColor sm:hidden"
