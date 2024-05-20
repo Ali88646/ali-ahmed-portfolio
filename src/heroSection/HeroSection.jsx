@@ -101,7 +101,7 @@ function HeroSection() {
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
             layer={false}
-            url={"public/docs/my-cv.pdf"}
+            url={"/docs/my-cv.pdf"}
           />
         </div>
       </div>
