@@ -26,7 +26,7 @@ function ConnectWithMe() {
             text={"My Resume"}
             bgColor={"bg-primaryColor"}
             textColor={"text-white"}
-            url={"public/docs/my-cv.pdf"}
+            url={"/docs/my-cv.pdf"}
           />
         </div>
       </div>
