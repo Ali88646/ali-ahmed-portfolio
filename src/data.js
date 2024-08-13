@@ -40,12 +40,12 @@ export const myWorks = [
   {
     id: 651,
     img_url: [
-      "public/images/myWorks/hyphen-systems/Hyphen-Systems-1.webp",
-      "public/images/myWorks/hyphen-systems/hyphen-systems-2.webp",
-      "public/images/myWorks/hyphen-systems/hyphen-systems-3.webp",
-      "public/images/myWorks/hyphen-systems/hyphen-systems-4.webp",
-      "public/images/myWorks/hyphen-systems/hyphen-systems-5.webp",
-      "public/images/myWorks/hyphen-systems/hyphen-systems-6.webp",
+      "/images/myWorks/hyphen-systems/Hyphen-Systems-1.webp",
+      "/images/myWorks/hyphen-systems/hyphen-systems-2.webp",
+      "/images/myWorks/hyphen-systems/hyphen-systems-3.webp",
+      "/images/myWorks/hyphen-systems/hyphen-systems-4.webp",
+      "/images/myWorks/hyphen-systems/hyphen-systems-5.webp",
+      "/images/myWorks/hyphen-systems/hyphen-systems-6.webp",
     ],
     title: "Hyphen-Systems",
     type: "Static Website",
