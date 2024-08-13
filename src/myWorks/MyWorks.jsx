@@ -3,10 +3,12 @@ import { FiArrowRight } from "react-icons/fi";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { ScrollTrigger } from "gsap/all";
 
 function MyWorks() {
   const [counter, setCounter] = useState(0);
+
   useEffect(() => {
     const counterTimer = setInterval(() => {
       setCounter((counter) => (counter < 1 ? counter + 1 : 0));
@@ -44,7 +46,7 @@ function MyWorks() {
               <img
                 src={i < 2 ? work.img_url[counter] : work.img_url[0]}
                 alt={work.title}
-                className={`${i < 2 && "work-img"} w-full scale-105 duration-200 hover:scale-110`}
+                className={`${i < 2 && "work-img"}  w-full scale-105 duration-200 hover:scale-110 sm:h-[18rem]`}
               />
             </div>
             <div className="flex w-full justify-between">
@@ -54,11 +56,13 @@ function MyWorks() {
               </div>
               <div className="flex w-[30%] items-center justify-end ">
                 <button
-                  className={`group-card-btn flex h-[8vw] hover:border-primaryColor hover:bg-primaryColor sm:h-[3vw]  ${(i + 1) % 3 !== 0 ? "w-1/2 sm:w-[50%]" : "w-1/2 sm:w-[25%]"}  items-center justify-center rounded-full border-2 border-textColor p-2 text-2xl text-textColor duration-200`}
+                  className={`group-card-btn flex h-[8vw] hover:border-primaryColor hover:bg-primaryColor sm:h-[3vw]  ${(i + 1) % 3 !== 0 ? "w-1/2  sm:w-[50%]" : "w-1/2 sm:w-[25%]"}  items-center justify-center rounded-full border-2 border-textColor p-2 text-2xl text-textColor duration-200`}
                 >
-                  <div className="card-btn w-full">
-                    <FiArrowRight />
-                  </div>
+                  <a href={work.link} target="_blank" className="w-full">
+                    <div className="card-btn w-full">
+                      <FiArrowRight />
+                    </div>
+                  </a>
                 </button>
               </div>
             </div>
